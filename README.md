@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="docs/assets/macrocephalon-services-technologies.png" alt="Macrocephalon Services & Technologies logo" width="220" />
+  <img src="docs/assets/macrocephalon-services-technologies.png" alt="Macrocephalon Services & Technologies logo" width="220" /><sup>™</sup>
 </p>
 
-<h1 align="center">Macrocephalon Services & Technologies TM</h1>
+<h1 align="center">Macrocephalon Services & Technologies<sup>™</sup></h1>
 
 <p align="center">
   <strong>Engineering the Future - From Code to Circuit</strong>
@@ -23,15 +23,11 @@
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.7.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
 </p>
 
-<p align="center">
-  <img src="docs/assets/macrocephalon-banner.png" alt="Macrocephalon fiery technology banner" width="100%" />
-</p>
-
 ---
 
 ## Overview
 
-Macrocephalon Services & Technologies TM is a multidisciplinary technology organization focused on software development, AI solutions, engineering projects, research support, and product innovation.
+Macrocephalon Services & Technologies is a multidisciplinary technology organization focused on software development, AI solutions, engineering projects, research support, and product innovation.
 
 This repository contains the official company website built with Next.js, React, TypeScript, Tailwind CSS, and a custom dark technical visual system inspired by circuits, AI neurons, embers, and engineering interfaces.
 
@@ -85,13 +81,13 @@ This repository contains the official company website built with Next.js, React,
 
 ## Tech Stack
 
-| Layer | Tools |
-| --- | --- |
-| Framework | Next.js App Router |
-| UI | React, TypeScript |
-| Styling | Tailwind CSS, custom global CSS |
-| Components | Radix UI, Lucide React |
-| Analytics | Vercel Analytics |
+| Layer       | Tools                                                 |
+| ----------- | ----------------------------------------------------- |
+| Framework   | Next.js App Router                                    |
+| UI          | React, TypeScript                                     |
+| Styling     | Tailwind CSS, custom global CSS                       |
+| Components  | Radix UI, Lucide React                                |
+| Analytics   | Vercel Analytics                                      |
 | Storage/API | Next.js API routes, local SQLite service-request data |
 
 ## Project Structure
@@ -110,7 +106,6 @@ styles/              Additional styling resources
 ## Brand Assets
 
 - README logo: `docs/assets/macrocephalon-services-technologies.png`
-- README banner: `docs/assets/macrocephalon-banner.png`
 - Public site logo asset: `public/logo.png`
 
 ## Trademark & Usage Notice
@@ -120,35 +115,6 @@ Macrocephalon, Macrocephalon Services & Technologies, the company logo, brand id
 This repository is public only for website deployment, company visibility, and portfolio presentation. Public access does not grant permission to copy, reuse, redistribute, modify, publish, commercialize, or derive work from any source code, data, written content, service structure, UI design, images, graphics, logo, branding, or visual assets in this repository.
 
 All rights are reserved unless written permission is granted by Macrocephalon Services & Technologies.
-
-## Run Locally
-
-```bash
-npm install
-npm run dev
-```
-
-Open:
-
-```text
-http://localhost:3000
-```
-
-## Build
-
-```bash
-npm run build
-npm run start
-```
-
-## Quality Checks
-
-```bash
-npx tsc --noEmit
-npm run build
-```
-
-Note: the repository has a `lint` script, but ESLint must be installed/configured before `npm run lint` can execute successfully.
 
 ## Contact
 
@@ -162,6 +128,7 @@ Note: the repository has a `lint` script, but ESLint must be installed/configure
 ---
 
 <p align="center">
-  <strong>Macrocephalon Services & Technologies TM</strong><br />
-  Software. AI. Engineering. Research.
+  <strong>Macrocephalon Services & Technologies<sup>&trade;</sup></strong><br />
+  Software. AI. Engineering. Research.<br />
+  Copyright 2026 Macrocephalon Services & Technologies. All rights reserved.
 </p>
