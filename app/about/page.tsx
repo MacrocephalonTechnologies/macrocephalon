@@ -12,7 +12,7 @@ export default function About() {
       />
 
       {/* Company Story */}
-      <Section>
+      <Section className="pt-6 sm:pt-8 lg:pt-12">
         <div className="max-w-3xl mx-auto space-y-6">
           <h2 className="text-3xl font-bold text-foreground">Our Story</h2>
           <p className="text-muted-foreground leading-relaxed">
