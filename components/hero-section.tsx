@@ -138,7 +138,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative pt-64 pb-24 sm:pt-72 sm:pb-28 lg:pt-80 lg:pb-32 overflow-hidden">
+    <section className="relative w-full max-w-full overflow-hidden pt-[25rem] pb-24 sm:pt-72 sm:pb-28 lg:pt-80 lg:pb-32">
       <div className="absolute top-1/4 left-1/4 w-96 h-96 -z-10 blur-3xl rounded-full" style={{ background: 'radial-gradient(circle, rgba(201, 168, 76, 0.15), transparent 70%)' }} />
       <div className="absolute bottom-1/3 right-1/4 w-80 h-80 -z-10 blur-3xl rounded-full" style={{ background: 'radial-gradient(circle, rgba(217, 181, 90, 0.12), transparent 70%)' }} />
 
@@ -158,12 +158,12 @@ export function HeroSection() {
         />
       ))}
 
-      <div className="golden-ring logo-ring absolute top-6 left-12 z-[4] sm:top-8 sm:left-16 lg:top-10 lg:left-16 w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56">
+      <Link href="/" className="golden-ring logo-ring absolute left-0 right-0 top-8 z-[4] mx-auto h-44 w-44 -translate-x-12 sm:left-16 sm:right-auto sm:top-8 sm:mx-0 sm:h-48 sm:w-48 sm:translate-x-0 lg:top-10 lg:left-16 lg:h-56 lg:w-56" aria-label="Go to home page">
         <img src="/logo-cl-version-circle.png" alt="Macrocephalon logo" />
-      </div>
-      <div className="absolute left-56 top-20 z-[5] w-[min(62vw,570px)] text-center sm:left-72 sm:top-24 lg:left-88 lg:top-28">
+      </Link>
+      <Link href="/" className="absolute left-0 right-0 top-60 z-[5] mx-auto block w-[min(92vw,570px)] -translate-x-12 text-center sm:left-72 sm:right-auto sm:top-24 sm:mx-0 sm:w-[min(62vw,570px)] sm:translate-x-0 lg:left-88 lg:top-28" aria-label="Go to home page">
         <div
-          className="text-4xl font-bold leading-none tracking-wide text-transparent bg-clip-text sm:text-5xl lg:text-6xl"
+          className="text-[1.35rem] font-bold leading-none tracking-normal text-transparent bg-clip-text sm:text-5xl sm:tracking-wide lg:text-6xl"
           style={{
             backgroundImage: 'linear-gradient(135deg, #C9A84C 0%, #FF7A18 42%, #63B8E8 58%, #D8F2FF 100%)',
           }}
@@ -171,14 +171,14 @@ export function HeroSection() {
           MACROCEPHALON
         </div>
         <div
-          className="mt-3 text-sm font-bold uppercase tracking-[0.42em] text-transparent bg-clip-text sm:text-base lg:text-lg"
+          className="mt-3 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-transparent bg-clip-text sm:text-base sm:tracking-[0.42em] lg:text-lg"
           style={{
             backgroundImage: 'linear-gradient(135deg, #D9B55A 0%, #FF7A18 38%, #7FD8FF 62%, #B9E6FF 100%)',
           }}
         >
           Services &amp; Technologies
         </div>
-      </div>
+      </Link>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
         <div className="grid gap-8 rounded-2xl border border-[#3EB8FF]/18 bg-[#050B12]/70 p-6 shadow-xl shadow-[#062338]/20 backdrop-blur-sm sm:p-8 lg:grid-cols-[1.35fr_1fr] lg:items-center">
@@ -187,7 +187,7 @@ export function HeroSection() {
               {activeSlide.eyebrow ?? activeSlide.label}
             </div>
             <div>
-              <h1 className="text-4xl font-bold leading-tight text-[#EAF6FF] sm:text-5xl lg:text-6xl">
+              <h1 className="text-3xl font-bold leading-tight text-[#EAF6FF] sm:text-5xl lg:text-6xl">
                 Engineering the Future
                 <span className="block bg-gradient-to-r from-[#86D8FF] via-[#3EB8FF] to-[#D9C878] bg-clip-text text-transparent">
                   From Code to Circuit
@@ -197,7 +197,7 @@ export function HeroSection() {
                 Project visuals across software, AI, hardware, IoT, and research engineering.
               </p>
             </div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#A8DDF2]">
+            <p className="break-words text-xs font-semibold uppercase tracking-[0.12em] text-[#A8DDF2] sm:text-sm sm:tracking-[0.18em]">
               Software Development &middot; AI Solutions &middot; Engineering Projects
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
@@ -238,34 +238,43 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative overflow-hidden rounded-3xl border border-[#C9A84C]/20 bg-black/70 shadow-2xl shadow-black/30">
-          <div className="group/gallery relative h-[360px] sm:h-[430px] lg:h-[500px]">
+        <div className="relative overflow-hidden rounded-3xl border border-[#C9A84C]/20 bg-[#151922] shadow-2xl shadow-black/30 sm:bg-black/70">
+          <div className="group/gallery relative sm:h-[430px] lg:h-[500px]">
             <img
               src={activeSlide.src}
               alt={activeSlide.label}
-              className="pointer-events-none absolute inset-0 h-full w-full scale-110 object-cover opacity-25 blur-xl"
+              className="pointer-events-none hidden sm:absolute sm:inset-0 sm:block sm:h-full sm:w-full sm:scale-110 sm:object-cover sm:opacity-25 sm:blur-xl"
             />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/50" />
+            <div className="pointer-events-none hidden sm:absolute sm:inset-0 sm:block sm:bg-gradient-to-b sm:from-black/20 sm:via-transparent sm:to-black/50" />
             <Link
               href={activeSlide.href ?? '/services'}
               className="absolute inset-0 z-20"
               aria-label={`Open ${activeSlide.title ?? activeSlide.label} service details`}
             />
+            <div className="relative aspect-[16/10] overflow-hidden bg-black sm:hidden">
+              <img
+                key={`mobile-${activeSlide.src}`}
+                src={activeSlide.src}
+                alt={activeSlide.label}
+                className="h-full w-full object-cover"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#151922] via-transparent to-transparent" />
+            </div>
             <img
               key={activeSlide.src}
               src={activeSlide.src}
               alt={activeSlide.label}
-              className="pointer-events-none relative z-10 h-full w-full object-contain transition-opacity duration-500 group-hover/gallery:scale-[1.01]"
+              className="pointer-events-none relative z-10 hidden h-full w-full object-contain transition-opacity duration-500 group-hover/gallery:scale-[1.01] sm:block"
             />
             <div className="pointer-events-none absolute left-5 top-5 z-30 rounded-full border border-[#C9A84C]/30 bg-black/70 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#D9B55A]">
               {activeSlide.eyebrow ?? activeSlide.label}
             </div>
-            <div className="pointer-events-none absolute bottom-16 left-5 right-5 z-30 max-w-xl rounded-xl border border-[#C9A84C]/20 bg-black/70 p-5 shadow-xl shadow-black/30 backdrop-blur-md sm:left-8 sm:bottom-8">
-              <h2 className="text-2xl font-bold text-foreground sm:text-3xl">{activeSlide.title ?? activeSlide.label}</h2>
-              <p className="mt-2 text-sm leading-6 text-muted-foreground sm:text-base">
+            <div className="pointer-events-none relative z-30 p-8 sm:absolute sm:bottom-8 sm:left-8 sm:right-5 sm:max-w-xl sm:rounded-xl sm:border sm:border-[#C9A84C]/20 sm:bg-black/70 sm:p-5 sm:shadow-xl sm:shadow-black/30 sm:backdrop-blur-md">
+              <h2 className="text-3xl font-bold leading-tight text-foreground sm:text-3xl">{activeSlide.title ?? activeSlide.label}</h2>
+              <p className="mt-5 text-base leading-8 text-muted-foreground sm:mt-2 sm:text-base sm:leading-6">
                 {activeSlide.description ?? 'Explore connected service details and implementation support.'}
               </p>
-              <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#FF7A18]">
+              <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#FF7A18] sm:mt-4">
                 VIEW SERVICE
                 <ArrowRight className="h-4 w-4" />
               </div>
@@ -277,7 +286,7 @@ export function HeroSection() {
                 event.preventDefault();
                 goToPreviousSlide();
               }}
-              className="absolute left-4 top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-[#FF7A18]/45 bg-black/75 text-[#D9B55A] shadow-lg shadow-black/40 transition-colors hover:bg-[#FF7A18]/20"
+              className="absolute left-4 top-[29%] z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-[#FF7A18]/45 bg-black/75 text-[#D9B55A] shadow-lg shadow-black/40 transition-colors hover:bg-[#FF7A18]/20 sm:top-1/2 sm:h-12 sm:w-12"
               aria-label="Previous gallery slide"
             >
               <ChevronLeft className="h-7 w-7" />
@@ -288,13 +297,13 @@ export function HeroSection() {
                 event.preventDefault();
                 goToNextSlide();
               }}
-              className="absolute right-4 top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-[#FF7A18]/45 bg-black/75 text-[#D9B55A] shadow-lg shadow-black/40 transition-colors hover:bg-[#FF7A18]/20"
+              className="absolute right-4 top-[29%] z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-[#FF7A18]/45 bg-black/75 text-[#D9B55A] shadow-lg shadow-black/40 transition-colors hover:bg-[#FF7A18]/20 sm:top-1/2 sm:h-12 sm:w-12"
               aria-label="Next gallery slide"
             >
               <ChevronRight className="h-7 w-7" />
             </button>
 
-            <div className="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 gap-2 rounded-full border border-[#C9A84C]/20 bg-black/60 px-3 py-2">
+            <div className="relative bottom-auto left-1/2 z-30 mb-8 flex w-fit -translate-x-1/2 gap-2 rounded-full border border-[#C9A84C]/20 bg-black/60 px-3 py-2 sm:absolute sm:bottom-5 sm:mb-0">
               {galleryImages.map((slide, index) => (
                 <button
                   key={slide.src}
