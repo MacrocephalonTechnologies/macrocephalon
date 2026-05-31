@@ -9,12 +9,8 @@ export default function About() {
       <PageHeader
         title="About Macrocephalon"
         description="Bridging cutting-edge technology with practical implementation across software, AI, and engineering."
-      />
-
-      {/* Company Story */}
-      <Section className="pt-6 sm:pt-8 lg:pt-12">
-        <div className="max-w-3xl mx-auto space-y-6">
-          <h2 className="text-3xl font-bold text-foreground">Our Story</h2>
+      >
+        <div className="max-w-3xl mt-6 space-y-4">
           <p className="text-muted-foreground leading-relaxed">
             Macrocephalon is a technology-focused private firm delivering high-quality technical services across multiple specialized divisions. Founded on the principle that cutting-edge technology should be accessible — from Fortune 500 firms to engineering students — we bridge the gap between innovation and implementation.
           </p>
@@ -22,7 +18,7 @@ export default function About() {
             Today, we operate three active divisions with proven expertise in software development, artificial intelligence, and end-to-end engineering project execution. We serve students, startups, private firms, and established enterprises, delivering solutions that meet the highest quality standards while remaining accessible at every scale.
           </p>
         </div>
-      </Section>
+      </PageHeader>
 
       {/* Mission & Vision */}
       <Section className="bg-muted/50">
