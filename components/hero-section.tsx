@@ -138,7 +138,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative w-full max-w-full overflow-hidden pt-20 pb-24 sm:pt-72 sm:pb-28 lg:pt-80 lg:pb-32">
+    <section className="relative w-full max-w-full overflow-hidden pt-64 pb-24 sm:pt-72 sm:pb-28 lg:pt-80 lg:pb-32">
       <div className="absolute top-1/4 left-1/4 w-96 h-96 -z-10 blur-3xl rounded-full" style={{ background: 'radial-gradient(circle, rgba(201, 168, 76, 0.15), transparent 70%)' }} />
       <div className="absolute bottom-1/3 right-1/4 w-80 h-80 -z-10 blur-3xl rounded-full" style={{ background: 'radial-gradient(circle, rgba(217, 181, 90, 0.12), transparent 70%)' }} />
 
