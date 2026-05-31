@@ -2,7 +2,7 @@
   <img src="docs/assets/macrocephalon-services-technologies.png" alt="Macrocephalon Services & Technologies logo" width="220" />
 </p>
 
-<h1 align="center">Macrocephalon Services & Technologies</h1>
+<h1 align="center">Macrocephalon Services & Technologies TM</h1>
 
 <p align="center">
   <strong>Engineering the Future - From Code to Circuit</strong>
@@ -31,7 +31,7 @@
 
 ## Overview
 
-Macrocephalon Services & Technologies is a multidisciplinary technology organization focused on software development, AI solutions, engineering projects, research support, and product innovation.
+Macrocephalon Services & Technologies TM is a multidisciplinary technology organization focused on software development, AI solutions, engineering projects, research support, and product innovation.
 
 This repository contains the official company website built with Next.js, React, TypeScript, Tailwind CSS, and a custom dark technical visual system inspired by circuits, AI neurons, embers, and engineering interfaces.
 
@@ -113,6 +113,14 @@ styles/              Additional styling resources
 - README banner: `docs/assets/macrocephalon-banner.png`
 - Public site logo asset: `public/logo.png`
 
+## Trademark & Usage Notice
+
+Macrocephalon, Macrocephalon Services & Technologies, the company logo, brand identity, visual design language, and related marks are trademarks applied for by Macrocephalon Services & Technologies.
+
+This repository is public only for website deployment, company visibility, and portfolio presentation. Public access does not grant permission to copy, reuse, redistribute, modify, publish, commercialize, or derive work from any source code, data, written content, service structure, UI design, images, graphics, logo, branding, or visual assets in this repository.
+
+All rights are reserved unless written permission is granted by Macrocephalon Services & Technologies.
+
 ## Run Locally
 
 ```bash
@@ -154,6 +162,6 @@ Note: the repository has a `lint` script, but ESLint must be installed/configure
 ---
 
 <p align="center">
-  <strong>Macrocephalon Services & Technologies</strong><br />
+  <strong>Macrocephalon Services & Technologies TM</strong><br />
   Software. AI. Engineering. Research.
 </p>
