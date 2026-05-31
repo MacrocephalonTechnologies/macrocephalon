@@ -138,7 +138,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative w-full max-w-full overflow-hidden pt-[25rem] pb-24 sm:pt-72 sm:pb-28 lg:pt-80 lg:pb-32">
+    <section className="relative w-full max-w-full overflow-hidden pt-20 pb-24 sm:pt-72 sm:pb-28 lg:pt-80 lg:pb-32">
       <div className="absolute top-1/4 left-1/4 w-96 h-96 -z-10 blur-3xl rounded-full" style={{ background: 'radial-gradient(circle, rgba(201, 168, 76, 0.15), transparent 70%)' }} />
       <div className="absolute bottom-1/3 right-1/4 w-80 h-80 -z-10 blur-3xl rounded-full" style={{ background: 'radial-gradient(circle, rgba(217, 181, 90, 0.12), transparent 70%)' }} />
 
@@ -180,7 +180,7 @@ export function HeroSection() {
         </div>
       </Link>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 space-y-4 sm:space-y-8">
         <div className="grid gap-8 rounded-2xl border border-[#3EB8FF]/18 bg-[#050B12]/70 p-6 shadow-xl shadow-[#062338]/20 backdrop-blur-sm sm:p-8 lg:grid-cols-[1.35fr_1fr] lg:items-center">
           <div className="space-y-5">
             <div className="w-fit rounded-full border border-[#63B8E8]/35 bg-[#071522]/75 px-4 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-[#B9E6FF]">
