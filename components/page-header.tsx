@@ -13,7 +13,7 @@ export function PageHeader({ title, description, children }: PageHeaderProps) {
           <p className="text-center text-lg sm:text-xl lg:text-lg text-muted-foreground max-w-2xl mx-auto">{description}</p>
         )}
         {children && (
-          <div className="text-justify">
+          <div className="max-w-3xl mx-auto text-justify">
             {children}
           </div>
         )}
