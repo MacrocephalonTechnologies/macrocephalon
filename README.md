@@ -120,7 +120,7 @@ All rights are reserved unless written permission is granted by Macrocephalon Se
 
 - Website: https://www.macrocephalon.com
 - GitHub: https://github.com/MacrocephalonTechnologies
-- LinkedIn: coming soon
+- LinkedIn: https://www.linkedin.com/company/macrocephalon/
 - Email: support@macrocephalon.com
 - Email: admin@macrocephalon.com
 - Location: India
