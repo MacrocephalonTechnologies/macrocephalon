@@ -29,8 +29,8 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="relative mx-auto flex w-full max-w-7xl items-center justify-center px-4 py-5 sm:px-6 md:justify-between md:py-4 lg:px-8">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 overflow-visible">
+      <div className="relative mx-auto flex w-full max-w-7xl items-center justify-center px-4 py-8 sm:px-6 md:justify-between md:py-4 lg:px-8">
         {/* Logo */}
         <Link href="/" className="absolute left-0 right-0 top-[calc(50%+0.25rem)] mx-auto flex w-fit -translate-y-1/2 flex-shrink-0 items-center md:static md:mx-0 md:mr-4 md:translate-y-0">
           <span className="flex flex-col rounded-md border border-[#C9A84C]/25 bg-black/35 px-3 py-2 font-bold text-transparent bg-gradient-to-r from-[#C9A84C] via-[#FF7A18] to-[#D9B55A] bg-clip-text shadow-[0_0_18px_rgba(255,122,24,0.16)] sm:px-4">
