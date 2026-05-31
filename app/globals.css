@@ -175,6 +175,7 @@
     @apply text-foreground;
     background: transparent;
     position: relative;
+    isolation: isolate;
   }
   
   body::before {
@@ -184,13 +185,35 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-      /* AI neural network nodes */
+    background:
       radial-gradient(circle at 20% 30%, rgba(201, 168, 76, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(217, 181, 90, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(62, 184, 255, 0.08) 0%, transparent 50%),
       radial-gradient(circle at 50% 50%, rgba(201, 168, 76, 0.05) 0%, transparent 80%);
     pointer-events: none;
     z-index: -1;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      url("data:image/svg+xml,%3Csvg width='1440' height='900' viewBox='0 0 1440 900' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M82 208 226 138 383 202 548 126 704 198 865 113 1046 180 1214 128 1370 205' stroke='%233EB8FF' stroke-opacity='.15'/%3E%3Cpath d='M135 610 285 516 442 590 614 480 792 565 950 452 1138 542 1310 466' stroke='%23FF7A18' stroke-opacity='.14'/%3E%3Cpath d='M190 360 340 310 506 372 668 296 824 350 990 275 1160 334 1335 270' stroke='%23C9A84C' stroke-opacity='.12'/%3E%3Cpath d='M258 142 340 310 285 516M548 126 506 372 614 480M865 113 990 275 950 452M1214 128 1160 334 1310 466' stroke='%233EB8FF' stroke-opacity='.1'/%3E%3Cpath d='M383 202 506 372 442 590M704 198 824 350 792 565M1046 180 1160 334 1138 542' stroke='%23FF7A18' stroke-opacity='.1'/%3E%3Ccircle cx='82' cy='208' r='3' fill='%233EB8FF' fill-opacity='.42'/%3E%3Ccircle cx='226' cy='138' r='2.7' fill='%23C9A84C' fill-opacity='.45'/%3E%3Ccircle cx='383' cy='202' r='3.2' fill='%23FF7A18' fill-opacity='.5'/%3E%3Ccircle cx='548' cy='126' r='3' fill='%233EB8FF' fill-opacity='.38'/%3E%3Ccircle cx='704' cy='198' r='4' fill='%23C9A84C' fill-opacity='.45'/%3E%3Ccircle cx='865' cy='113' r='2.8' fill='%23FF7A18' fill-opacity='.45'/%3E%3Ccircle cx='1046' cy='180' r='3.4' fill='%233EB8FF' fill-opacity='.42'/%3E%3Ccircle cx='1214' cy='128' r='3' fill='%23C9A84C' fill-opacity='.4'/%3E%3Ccircle cx='1370' cy='205' r='4' fill='%23FF7A18' fill-opacity='.45'/%3E%3Ccircle cx='135' cy='610' r='3.5' fill='%23FF7A18' fill-opacity='.42'/%3E%3Ccircle cx='285' cy='516' r='3' fill='%233EB8FF' fill-opacity='.38'/%3E%3Ccircle cx='442' cy='590' r='4' fill='%23C9A84C' fill-opacity='.42'/%3E%3Ccircle cx='614' cy='480' r='3.1' fill='%23FF7A18' fill-opacity='.45'/%3E%3Ccircle cx='792' cy='565' r='3.7' fill='%233EB8FF' fill-opacity='.42'/%3E%3Ccircle cx='950' cy='452' r='3' fill='%23C9A84C' fill-opacity='.42'/%3E%3Ccircle cx='1138' cy='542' r='3.7' fill='%23FF7A18' fill-opacity='.43'/%3E%3Ccircle cx='1310' cy='466' r='3.2' fill='%233EB8FF' fill-opacity='.4'/%3E%3Ccircle cx='190' cy='360' r='2.9' fill='%23C9A84C' fill-opacity='.42'/%3E%3Ccircle cx='340' cy='310' r='3.2' fill='%233EB8FF' fill-opacity='.4'/%3E%3Ccircle cx='506' cy='372' r='4' fill='%23FF7A18' fill-opacity='.47'/%3E%3Ccircle cx='668' cy='296' r='3' fill='%23C9A84C' fill-opacity='.42'/%3E%3Ccircle cx='824' cy='350' r='3.4' fill='%233EB8FF' fill-opacity='.42'/%3E%3Ccircle cx='990' cy='275' r='3.1' fill='%23FF7A18' fill-opacity='.45'/%3E%3Ccircle cx='1160' cy='334' r='4' fill='%23C9A84C' fill-opacity='.42'/%3E%3Ccircle cx='1335' cy='270' r='3' fill='%233EB8FF' fill-opacity='.42'/%3E%3C/g%3E%3C/svg%3E"),
+      radial-gradient(ellipse at 72% 32%, rgba(62, 184, 255, 0.12), transparent 34%),
+      radial-gradient(ellipse at 28% 66%, rgba(255, 122, 24, 0.1), transparent 34%);
+    background-position: 0 0, 0 0, 0 0;
+    background-size: 1440px 900px, 100% 100%, 100% 100%;
+    opacity: 0.42;
+    pointer-events: none;
+    z-index: -1;
+    animation: neural-drift 24s ease-in-out infinite alternate, neural-pulse 5s ease-in-out infinite;
+  }
+
+  header,
+  main,
+  footer {
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -210,17 +233,36 @@
   @keyframes float-ember {
     0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
     50% { opacity: 1; }
-    100% { transform: translateY(-300px) translateX(100px); opacity: 0; }
+    100% { transform: translateY(300px) translateX(100px); opacity: 0; }
   }
 
   @keyframes glow-pulse {
     0%, 100% { box-shadow: 0 0 20px rgba(255, 122, 24, 0.5); }
-    50% { box-shadow: 0 0 40px rgba(255, 122, 24, 0.8); }
+    50% { box-shadow: 0 0 42px rgba(255, 122, 24, 0.82); }
   }
 
   @keyframes shimmer {
     0%, 100% { background-position: -1000px 0; }
     100% { background-position: 1000px 0; }
+  }
+
+  @keyframes neural-drift {
+    0% {
+      background-position: 0 0, 0 0, 0 0;
+      filter: saturate(1) brightness(0.92);
+    }
+    50% {
+      filter: saturate(1.18) brightness(1.08);
+    }
+    100% {
+      background-position: 80px -40px, 0 0, 0 0;
+      filter: saturate(1.08) brightness(1);
+    }
+  }
+
+  @keyframes neural-pulse {
+    0%, 100% { opacity: 0.34; }
+    50% { opacity: 0.48; }
   }
 
   /* Glassmorphism Panel */
@@ -242,11 +284,21 @@
     box-shadow: 0 0 15px rgba(255, 122, 24, 0.6);
   }
 
+  .page-ember-particle {
+    position: fixed;
+    z-index: 2;
+    pointer-events: none;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 122, 24, 0.8), rgba(255, 90, 31, 0.3));
+    animation: float-ember var(--duration) ease-in infinite;
+    box-shadow: 0 0 15px rgba(255, 122, 24, 0.6);
+  }
+
   /* Golden Glow Ring */
   .golden-ring {
     position: absolute;
     border-radius: 50%;
-    border: 2px solid rgba(201, 168, 76, 0.3);
+    border: 2px solid rgba(201, 168, 76, 0.32);
     animation: glow-pulse 3s ease-in-out infinite;
   }
 

@@ -5,7 +5,24 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Section } from '@/components/section';
 import { HeroSection } from '@/components/hero-section';
+import { allServices } from '@/data/services';
 import { Code2, Brain, Wrench, CheckCircle, Users, Zap, TrendingUp } from 'lucide-react';
+
+const featuredServiceSlugs = [
+  'web-development',
+  'custom-software',
+  'ai-ml-models',
+  'llm-integration',
+  'academic-projects',
+  'hardware-projects',
+  'matlab-projects',
+  'research-publishing',
+  'iot-projects',
+];
+
+const featuredServices = featuredServiceSlugs
+  .map((slug) => allServices.find((service) => service.slug === slug))
+  .filter(Boolean);
 
 export default function Home() {
   return (
@@ -120,26 +137,17 @@ export default function Home() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[
-            'Web Development',
-            'Custom Software',
-            'AI/ML Models',
-            'LLM Integration',
-            'Academic Projects',
-            'Hardware Solutions',
-            'MATLAB Projects',
-            'Research Publishing',
-            'IoT Systems',
-          ].map((service, idx) => (
-            <div
-              key={idx}
-              className="p-4 rounded-lg border border-border hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5"
+          {featuredServices.map((service) => service && (
+            <Link
+              key={service.slug}
+              href={`/services#${service.slug}`}
+              className="block p-4 rounded-lg border border-border hover:border-primary/50 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/5"
             >
-              <h3 className="font-semibold text-foreground mb-1">{service}</h3>
+              <h3 className="font-semibold text-foreground mb-1">{service.title}</h3>
               <p className="text-xs text-muted-foreground">
-                Expert solutions tailored to your specific requirements.
+                {service.description}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="text-center mt-8">
