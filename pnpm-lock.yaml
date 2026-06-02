@@ -92,9 +92,6 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: 1.2.8
         version: 1.2.8(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@next/third-parties':
-        specifier: ^16.2.7
-        version: 16.2.7(next@16.2.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4))
       '@vercel/analytics':
         specifier: 1.6.1
         version: 1.6.1(next@16.2.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
@@ -1232,11 +1229,6 @@ packages:
 
   '@types/react@19.2.14':
     resolution: {integrity: sha512-ilcTH/UniCkMdtexkoCN0bI7pMcJDvmQFPvuPvmEaYA/NSfFTAgdUSLAoVjaRJm7+6PvcM+q1zYOwS4wTYMF9w==}
-
-  '@next/third-parties@16.2.7':
-    resolution: {integrity: sha512-K5GxLJQCnp3KwFJPSEpMFjZhR2kwOvgBfqfVLuMBWQtUHxsNpPPqy2QXcEvJMrL5zrmwVXVKG1vKJ8R7bYcPgQ==}
-    peerDependencies:
-      next: ^15 || ^16
 
   '@vercel/analytics@1.6.1':
     resolution: {integrity: sha512-oH9He/bEM+6oKlv3chWuOOcp8Y6fo6/PSro8hEkgCW3pu9/OiCXiUpRUogDh3Fs3LH2sosDrx8CxeOLBEE+afg==}
@@ -2741,15 +2733,6 @@ snapshots:
   '@types/react@19.2.14':
     dependencies:
       csstype: 3.2.3
-
-  '@next/third-parties@16.2.7(next@16.2.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4))':
-    peerDependencies:
-      next: ^15 || ^16
-    peerDependenciesMeta:
-      next:
-        optional: true
-    dependencies:
-      next: 16.2.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
 
   '@vercel/analytics@1.6.1(next@16.2.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)':
     optionalDependencies:
