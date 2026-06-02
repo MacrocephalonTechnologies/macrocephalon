@@ -1,7 +1,37 @@
+import type { Metadata } from 'next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Section } from '@/components/section';
 import { PageHeader } from '@/components/page-header';
 import { Code2, Brain, Wrench, Target, Heart, Zap } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'About Macrocephalon | Technology, AI & Engineering Company',
+  description: 'Learn about Macrocephalon Services & Technologies, a technology-focused company specializing in AI solutions, software engineering, embedded systems, engineering innovation, research support, and consulting services.',
+  keywords: [
+    'About Macrocephalon',
+    'Technology Company',
+    'Engineering Company',
+    'AI Company',
+    'Research Support',
+    'Engineering Innovation',
+  ],
+  openGraph: {
+    title: 'About Macrocephalon | Technology, AI & Engineering Company',
+    description: 'Learn about Macrocephalon Services & Technologies, a technology-focused company specializing in AI solutions, software engineering, embedded systems, engineering innovation, research support, and consulting services.',
+    url: 'https://www.macrocephalon.com/about',
+    siteName: 'Macrocephalon',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Macrocephalon | Technology, AI & Engineering Company',
+    description: 'Learn about Macrocephalon Services & Technologies, a technology-focused company specializing in AI solutions, software engineering, embedded systems, engineering innovation, research support, and consulting services.',
+  },
+  alternates: {
+    canonical: 'https://www.macrocephalon.com/about',
+  },
+};
 
 export default function About() {
   return (

@@ -1,9 +1,40 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Section } from '@/components/section';
 import { PageHeader } from '@/components/page-header';
 import { divisions } from '@/data/services';
 import { ArrowRight, Brain, Code2, Wrench } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Technology Services | AI, Software, Embedded Systems & Consulting',
+  description: 'Explore Macrocephalon services including AI development, software solutions, web applications, embedded systems, IoT solutions, MATLAB programming, research assistance, and technology consulting.',
+  keywords: [
+    'AI Development',
+    'Software Services',
+    'Embedded Systems',
+    'IoT Solutions',
+    'Technology Consulting',
+    'Engineering Services',
+    'MATLAB Development',
+  ],
+  openGraph: {
+    title: 'Technology Services | AI, Software, Embedded Systems & Consulting',
+    description: 'Explore Macrocephalon services including AI development, software solutions, web applications, embedded systems, IoT solutions, MATLAB programming, research assistance, and technology consulting.',
+    url: 'https://www.macrocephalon.com/services',
+    siteName: 'Macrocephalon',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Technology Services | AI, Software, Embedded Systems & Consulting',
+    description: 'Explore Macrocephalon services including AI development, software solutions, web applications, embedded systems, IoT solutions, MATLAB programming, research assistance, and technology consulting.',
+  },
+  alternates: {
+    canonical: 'https://www.macrocephalon.com/services',
+  },
+};
 
 const divisionIcons = [Code2, Brain, Wrench];
 

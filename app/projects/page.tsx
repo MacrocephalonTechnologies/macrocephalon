@@ -1,3 +1,34 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Engineering & Software Projects | Macrocephalon Portfolio',
+  description: 'Discover engineering, software, AI, IoT, embedded systems, automation, and research projects developed by Macrocephalon Services & Technologies.',
+  keywords: [
+    'Engineering Projects',
+    'Software Projects',
+    'AI Projects',
+    'IoT Projects',
+    'Automation Projects',
+    'Research Projects',
+  ],
+  openGraph: {
+    title: 'Engineering & Software Projects | Macrocephalon Portfolio',
+    description: 'Discover engineering, software, AI, IoT, embedded systems, automation, and research projects developed by Macrocephalon Services & Technologies.',
+    url: 'https://www.macrocephalon.com/projects',
+    siteName: 'Macrocephalon',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Engineering & Software Projects | Macrocephalon Portfolio',
+    description: 'Discover engineering, software, AI, IoT, embedded systems, automation, and research projects developed by Macrocephalon Services & Technologies.',
+  },
+  alternates: {
+    canonical: 'https://www.macrocephalon.com/projects',
+  },
+};
+
 'use client';
 
 import { useState, useMemo } from 'react';

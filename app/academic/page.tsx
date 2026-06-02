@@ -1,6 +1,36 @@
+import type { Metadata } from 'next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Section } from '@/components/section';
 import { PageHeader } from '@/components/page-header';
+
+export const metadata: Metadata = {
+  title: 'Academic & Research Support Services | Macrocephalon',
+  description: 'Professional academic support including engineering projects, MATLAB development, research assistance, simulations, technical documentation, and innovation consulting.',
+  keywords: [
+    'Academic Projects',
+    'Research Support',
+    'MATLAB Projects',
+    'Engineering Education',
+    'Research Assistance',
+    'Technical Documentation',
+  ],
+  openGraph: {
+    title: 'Academic & Research Support Services | Macrocephalon',
+    description: 'Professional academic support including engineering projects, MATLAB development, research assistance, simulations, technical documentation, and innovation consulting.',
+    url: 'https://www.macrocephalon.com/academic',
+    siteName: 'Macrocephalon',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Academic & Research Support Services | Macrocephalon',
+    description: 'Professional academic support including engineering projects, MATLAB development, research assistance, simulations, technical documentation, and innovation consulting.',
+  },
+  alternates: {
+    canonical: 'https://www.macrocephalon.com/academic',
+  },
+};
 
 const pillars = [
   {
