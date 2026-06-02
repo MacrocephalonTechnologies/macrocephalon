@@ -9,9 +9,45 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Macrocephalon Services & Technologies',
-  description: 'Enterprise technology and consulting services for innovation and excellence',
-  generator: 'v0.app',
+  metadataBase: new URL('https://www.macrocephalon.com'),
+  title: 'Macrocephalon | Software, AI & Engineering Project Solutions',
+  description: 'Macrocephalon provides software development, AI solutions, web applications, embedded systems, MATLAB projects, academic engineering projects, research support, and technology consulting services.',
+  keywords: [
+    'Macrocephalon',
+    'Software Development',
+    'AI Solutions',
+    'Web Development',
+    'Engineering Projects',
+    'Academic Projects',
+    'Embedded Systems',
+    'MATLAB Projects',
+    'Research Support',
+    'LLM Integration',
+    'IoT Projects',
+    'Technology Consulting',
+  ],
+  authors: [{ name: 'Macrocephalon' }],
+  creator: 'Macrocephalon',
+  publisher: 'Macrocephalon',
+  openGraph: {
+    title: 'Macrocephalon | Software, AI & Engineering Project Solutions',
+    description: 'Engineering the Future From Code to Circuit — software development, AI solutions, engineering projects, MATLAB, embedded systems, research support, and technology consulting.',
+    url: 'https://www.macrocephalon.com',
+    siteName: 'Macrocephalon',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   icons: {
     icon: [
       {
