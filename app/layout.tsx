@@ -98,7 +98,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
-        <GoogleAnalytics gaId="G-3XG4NLYMJ2" />
+        <GoogleAnalytics gaId="G-R4BTVB7C2M" />
         <Header />
         <main className="flex-1">
           {children}
