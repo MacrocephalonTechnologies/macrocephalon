@@ -72,9 +72,31 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const schemaData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Macrocephalon',
+    alternateName: 'Macrocephalon Services & Technologies',
+    url: 'https://www.macrocephalon.com',
+    logo: 'https://www.macrocephalon.com/icon.svg',
+    slogan: 'Engineering the Future From Code to Circuit',
+    email: 'director@macrocephalon.com',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Jaysingpur',
+      addressRegion: 'Maharashtra',
+      addressCountry: 'IN',
+    },
+    sameAs: [],
+  }
+
   return (
     <html lang="en" className="bg-background" suppressHydrationWarning>
       <body className="font-sans antialiased flex flex-col min-h-screen">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
         <Header />
         <main className="flex-1">
           {children}
