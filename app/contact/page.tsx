@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { Section } from '@/components/section';
 import { PageHeader } from '@/components/page-header';
-import { Check, Clock, Mail, MapPin, Send, Globe2, Linkedin, Facebook, Twitter, Github, Instagram, Youtube } from 'lucide-react';
+import { Check, Clock, Mail, MapPin, Send } from 'lucide-react';
 
 const serviceOptions = [
   'Web Development',
@@ -39,51 +39,6 @@ const supportNeeds = [
   'Hardware design',
   'Documentation',
   'Deployment',
-];
-
-const socialLinks = [
-  {
-    name: 'Website',
-    url: 'https://www.macrocephalon.com',
-    icon: Globe2,
-    label: '🌐 Website',
-  },
-  {
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/company/macrocephalon/',
-    icon: Linkedin,
-    label: '💼 LinkedIn',
-  },
-  {
-    name: 'Facebook',
-    url: 'https://www.facebook.com/macrocephalontechnologies/',
-    icon: Facebook,
-    label: '📘 Facebook',
-  },
-  {
-    name: 'X (Twitter)',
-    url: 'https://x.com/macrocephalons',
-    icon: Twitter,
-    label: '🐦 X (Twitter)',
-  },
-  {
-    name: 'GitHub',
-    url: 'https://github.com/MacrocephalonTechnologies',
-    icon: Github,
-    label: '💻 GitHub',
-  },
-  {
-    name: 'Instagram',
-    url: 'https://www.instagram.com/macrocephalontechnologies/',
-    icon: Instagram,
-    label: '📸 Instagram',
-  },
-  {
-    name: 'YouTube',
-    url: 'https://www.youtube.com/@macrocephalontechnologies',
-    icon: Youtube,
-    label: '▶️ YouTube',
-  },
 ];
 
 export default function Contact() {
@@ -194,9 +149,9 @@ export default function Contact() {
             ].map((info) => {
               const Icon = info.icon;
               return (
-                <div key={info.label} className="flex gap-4 rounded-xl border border-[#C9A84C]/15 bg-black/35 p-4">
-                  <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                    <Icon className="h-5 w-5 text-primary" />
+                <div key={info.label} className="flex gap-4 rounded-xl border-2 border-[#D4CCBF] bg-white shadow-md p-4">
+                  <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg bg-[#D4A574]/10">
+                    <Icon className="h-5 w-5 text-[#D4A574]" />
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
@@ -210,32 +165,44 @@ export default function Contact() {
               );
             })}
 
-            {/* Social Media Links */}
-            <div className="rounded-xl border border-[#C9A84C]/15 bg-black/35 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground mb-4">
-                Follow Us On Social Media
-              </p>
-              <div className="grid grid-cols-2 gap-3">
-                {socialLinks.map((social) => {
-                  const Icon = social.icon;
-                  return (
-                    <a
-                      key={social.name}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 rounded-lg border border-[#C9A84C]/25 bg-black/35 px-3 py-2 text-xs font-medium text-foreground hover:bg-[#FF7A18]/15 hover:border-[#FF7A18]/50 hover:text-[#FFD48A] transition-colors"
-                    >
-                      <Icon className="h-4 w-4" />
-                      <span>{social.name}</span>
-                    </a>
-                  );
-                })}
+            {/* Quick Contact Section Header */}
+            <div className="text-center p-4 rounded-xl border-2 border-[#D4CCBF] bg-[#EBE9E5]">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-[#1F2937]">Quick Contact</h3>
+            </div>
+
+            {/* Contact Form */}
+            <div className="rounded-xl border-2 border-[#D4CCBF] bg-[#EBE9E5] p-6">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-[#1F2937] mb-4">Contact</h3>
+              <div className="space-y-3">
+                <div>
+                  <Input
+                    type="email"
+                    placeholder="WhatsApp / Email"
+                    value={formData.email}
+                    name="email"
+                    onChange={handleChange}
+                    className="border-[#D4CCBF] bg-white"
+                  />
+                </div>
+                <div>
+                  <label className="text-xs font-medium text-[#6B7280] mb-1 block">Message</label>
+                  <Input
+                    type="text"
+                    placeholder="Your message"
+                    value={formData.message}
+                    name="message"
+                    onChange={handleChange}
+                    className="border-[#D4CCBF] bg-white"
+                  />
+                </div>
+                <button className="w-full bg-[#D4A574] hover:bg-[#B8860B] text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all">
+                  Send
+                </button>
               </div>
             </div>
           </aside>
 
-          <Card id="service-request-form" className="border-[#C9A84C]/15 bg-black/50 shadow-2xl shadow-black/20">
+          <Card id="service-request-form" className="border-[#D4A574]/15 bg-white shadow-lg">
             <CardContent className="p-6 sm:p-8">
               {submitted ? (
                 <div className="py-16 text-center">
@@ -245,7 +212,7 @@ export default function Contact() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-8">
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#D9B55A]">
+                    <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#D4A574]">
                       Service Request Form
                     </p>
                     <h2 className="mt-3 text-3xl font-bold text-foreground">Tell us what you need</h2>
@@ -349,7 +316,7 @@ export default function Contact() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-gradient-to-r from-[#FF7A18] to-[#FF5A1F] font-semibold text-white shadow-lg shadow-orange-500/25 hover:from-[#FF5A1F] hover:to-[#FF7A18]"
+                    className="w-full bg-gradient-to-r from-[#D4A574] to-[#B8860B] font-semibold text-white shadow-lg shadow-orange-500/25 hover:from-[#B8860B] hover:to-[#D4A574]"
                   >
                     <Send className="mr-2 h-5 w-5" />
                     Submit Service Request
@@ -401,12 +368,12 @@ function SelectionButton({
       onClick={onClick}
       className={`flex min-h-10 items-center justify-between gap-2 rounded-lg border px-3 py-2 text-left text-xs font-semibold transition-colors ${
         selected
-          ? 'border-[#FF7A18] bg-gradient-to-r from-[#FF7A18]/35 to-[#C9A84C]/20 text-white shadow-[0_0_16px_rgba(255,122,24,0.22)]'
-          : 'border-border bg-input text-muted-foreground hover:border-[#C9A84C]/50 hover:text-foreground'
+          ? 'border-[#D4A574] bg-gradient-to-r from-[#D4A574]/35 to-[#D4A574]/20 text-white shadow-[0_0_16px_rgba(255,122,24,0.22)]'
+          : 'border-border bg-input text-muted-foreground hover:border-[#D4A574]/50 hover:text-foreground'
       }`}
     >
       <span>{label}</span>
-      {selected ? <Check className="h-4 w-4 flex-shrink-0 text-[#FFD48A]" /> : null}
+      {selected ? <Check className="h-4 w-4 flex-shrink-0 text-[#D4A574]" /> : null}
     </button>
   );
 }

@@ -5,7 +5,7 @@ import { NextResponse } from 'next/server';
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
 
-const imageExtensions = new Set(['.png', '.jpg', '.jpeg', '.webp', '.gif']);
+const imageExtensions = new Set(['.png', '.jpg', '.jpeg', '.webp', '.gif', '.svg']);
 
 function titleFromFilename(filename: string) {
   return path

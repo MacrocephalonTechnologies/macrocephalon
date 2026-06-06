@@ -1,31 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-  <!-- Black background -->
-  <rect width="200" height="200" fill="#000000"/>
-  
-  <!-- Outer decorative ring with dark fire color -->
-  <circle cx="100" cy="100" r="92" fill="none" stroke="#8B2500" stroke-width="3" opacity="0.9"/>
-  
-  <!-- Flame-inspired gradient defs -->
-  <defs>
-    <linearGradient id="flameGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#ff9f1c;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#d4633d;stop-opacity:1" />
-    </linearGradient>
-    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:0.3" />
-      <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
-    </radialGradient>
-  </defs>
-  
-  <!-- Glow effect -->
-  <circle cx="100" cy="100" r="75" fill="url(#glowGrad)"/>
-  
-  <!-- Large fiery M -->
-  <text x="100" y="125" font-size="100" font-weight="900" text-anchor="middle" fill="url(#flameGrad)" font-family="Arial, sans-serif" letter-spacing="-5">M</text>
-  
-  <!-- Flame accent highlights on the M -->
-  <circle cx="75" cy="70" r="8" fill="#ff6b35" opacity="0.6"/>
-  <circle cx="125" cy="70" r="8" fill="#ff9f1c" opacity="0.6"/>
-  <circle cx="100" cy="140" r="6" fill="#ff9f1c" opacity="0.5"/>
+  <!-- White background -->
+  <rect width="200" height="200" fill="#FFFFFF"/>
+
+  <!-- Outer circle border -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#000000" stroke-width="2"/>
+
+  <!-- Inner circle -->
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#000000" stroke-width="1.5"/>
+
+  <!-- Professional black M -->
+  <text x="100" y="135" font-size="90" font-weight="900" text-anchor="middle" fill="#000000" font-family="Georgia, serif">M</text>
 </svg>

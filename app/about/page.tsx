@@ -51,12 +51,12 @@ export default function About() {
       </PageHeader>
 
       {/* Mission & Vision */}
-      <Section className="bg-muted/50">
+      <Section className="bg-[#EBE9E5] border-t-2 border-b-2 border-[#9B8B7E] py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <Card className="bg-card border-border">
+          <Card className="bg-white border-2 border-[#D4CCBF] shadow-md">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Target className="w-5 h-5 text-primary" />
+                <Target className="w-5 h-5 text-[#D4A574]" />
                 Our Mission
               </CardTitle>
             </CardHeader>
@@ -70,10 +70,10 @@ export default function About() {
             </CardContent>
           </Card>
 
-          <Card className="bg-card border-border">
+          <Card className="bg-white border-2 border-[#D4CCBF] shadow-md">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Zap className="w-5 h-5 text-secondary" />
+                <Zap className="w-5 h-5 text-[#D4A574]" />
                 Our Vision
               </CardTitle>
             </CardHeader>
@@ -90,7 +90,7 @@ export default function About() {
       </Section>
 
       {/* Our Divisions */}
-      <Section>
+      <Section className="border-t-2 border-b-2 border-[#9B8B7E] pt-16 pb-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Our Divisions</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -99,10 +99,10 @@ export default function About() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="bg-card border-border hover:border-primary/50 transition-all">
+          <Card className="bg-white border-2 border-[#D4CCBF] shadow-md hover:border-[#D4A574] transition-all hover:shadow-lg">
             <CardHeader>
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <Code2 className="h-6 w-6 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-[#D4A574]/10 flex items-center justify-center mb-4">
+                <Code2 className="h-6 w-6 text-[#D4A574]" />
               </div>
               <CardTitle>IT Division</CardTitle>
               <p className="text-sm text-muted-foreground mt-2">Software &amp; Services</p>
@@ -120,10 +120,10 @@ export default function About() {
             </CardContent>
           </Card>
 
-          <Card className="bg-card border-border hover:border-secondary/50 transition-all">
+          <Card className="bg-white border-2 border-[#D4CCBF] shadow-md hover:border-[#D4A574] transition-all hover:shadow-lg">
             <CardHeader>
-              <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
-                <Brain className="h-6 w-6 text-secondary" />
+              <div className="w-12 h-12 rounded-lg bg-[#D4A574]/10 flex items-center justify-center mb-4">
+                <Brain className="h-6 w-6 text-[#D4A574]" />
               </div>
               <CardTitle>AI Division</CardTitle>
               <p className="text-sm text-muted-foreground mt-2">AI &amp; Machine Learning</p>
@@ -141,10 +141,10 @@ export default function About() {
             </CardContent>
           </Card>
 
-          <Card className="bg-card border-border hover:border-primary/50 transition-all">
+          <Card className="bg-white border-2 border-[#D4CCBF] shadow-md hover:border-[#D4A574] transition-all hover:shadow-lg">
             <CardHeader>
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <Wrench className="h-6 w-6 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-[#D4A574]/10 flex items-center justify-center mb-4">
+                <Wrench className="h-6 w-6 text-[#D4A574]" />
               </div>
               <CardTitle>Project Division</CardTitle>
               <p className="text-sm text-muted-foreground mt-2">Engineering Projects</p>
@@ -165,7 +165,7 @@ export default function About() {
       </Section>
 
       {/* Core Values */}
-      <Section className="bg-muted/50">
+      <Section className="bg-[#EBE9E5] border-t-2 border-b-2 border-[#9B8B7E] py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Core Values</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -196,7 +196,7 @@ export default function About() {
               description: 'Strict privacy for all client projects and IP.',
             },
           ].map((value, idx) => (
-            <div key={idx} className="text-center">
+            <div key={idx} className="p-6 rounded-lg border-2 border-[#D4CCBF] bg-white shadow-md text-center hover:shadow-lg transition-all">
               <h3 className="font-semibold text-foreground mb-2">{value.title}</h3>
               <p className="text-sm text-muted-foreground">{value.description}</p>
             </div>
@@ -205,7 +205,7 @@ export default function About() {
       </Section>
 
       {/* Engineering Branches */}
-      <Section>
+      <Section className="border-t-2 border-[#9B8B7E] pt-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Engineering Disciplines Covered</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -227,7 +227,7 @@ export default function About() {
           ].map((branch, idx) => (
             <div
               key={idx}
-              className="p-4 rounded-lg border border-border bg-card text-center hover:border-primary/50 transition-colors"
+              className="p-4 rounded-lg border-2 border-[#D4CCBF] bg-white shadow-md text-center hover:border-[#D4A574] hover:shadow-lg transition-all"
             >
               <p className="font-medium text-foreground text-sm">{branch}</p>
             </div>

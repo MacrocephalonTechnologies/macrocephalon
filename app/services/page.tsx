@@ -52,7 +52,7 @@ export default function Services() {
         const hoverBorder = division.accent === 'secondary' ? 'hover:border-secondary/50' : 'hover:border-primary/50';
 
         return (
-          <Section key={division.title} className={index === 1 ? 'bg-muted/50' : undefined}>
+          <Section key={division.title} className={`${index !== 0 ? 'border-t-2 border-[#9B8B7E]' : ''} ${index === 1 ? 'bg-[#EBE9E5]' : ''} ${index !== 2 ? 'pb-16' : ''} ${index !== 0 ? 'pt-16' : ''}`}>
             <div className="space-y-8">
               <div className="flex items-start gap-4">
                 <div className={`flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 ${iconColor}`}>
@@ -69,7 +69,7 @@ export default function Services() {
                   <article
                     key={service.title}
                     id={service.slug}
-                    className={`group scroll-mt-28 overflow-hidden rounded-xl border border-border bg-card transition-all ${hoverBorder} hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10`}
+                    className={`group scroll-mt-28 overflow-hidden rounded-xl border border-[#D4CCBF] bg-white shadow-md transition-all ${hoverBorder} hover:-translate-y-1 hover:shadow-lg`}
                   >
                     <div className="relative aspect-[16/9] overflow-hidden bg-black">
                       <img
@@ -85,7 +85,7 @@ export default function Services() {
                       <ul className="mt-5 grid gap-2">
                         {service.services.map((item) => (
                           <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
-                            <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#C9A84C]" />
+                            <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#D4A574]" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -99,7 +99,7 @@ export default function Services() {
         );
       })}
 
-      <Section className="bg-muted/50">
+      <Section className="bg-[#EBE9E5] border-t-2 border-b-2 border-[#9B8B7E] py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Which Service Fits You?</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -107,10 +107,10 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="overflow-x-auto rounded-xl border border-border bg-card">
+        <div className="overflow-x-auto rounded-xl border-2 border-[#D4CCBF] bg-white shadow-md">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-border">
+              <tr className="border-b-2 border-[#D4CCBF] bg-[#F8F7F5]">
                 <th className="px-4 py-3 text-left font-semibold text-foreground">Client Type</th>
                 <th className="px-4 py-3 text-left font-semibold text-foreground">Best Fit</th>
                 <th className="px-4 py-3 text-left font-semibold text-foreground">Key Services</th>
@@ -125,7 +125,7 @@ export default function Services() {
                 ['Enterprises', 'All Divisions', 'Complete transformation, AI/ML, custom engineering'],
                 ['Local Businesses', 'IT Division', 'Affordable web/mobile apps, business automation'],
               ].map(([type, fit, services]) => (
-                <tr key={type} className="border-b border-border last:border-b-0 hover:bg-muted/50 transition-colors">
+                <tr key={type} className="border-b border-[#D4CCBF] last:border-b-0 hover:bg-[#F0EEEA] transition-colors">
                   <td className="px-4 py-3 text-foreground font-medium">{type}</td>
                   <td className="px-4 py-3 text-muted-foreground">{fit}</td>
                   <td className="px-4 py-3 text-muted-foreground">{services}</td>
@@ -136,13 +136,13 @@ export default function Services() {
         </div>
       </Section>
 
-      <Section className="bg-card border-t border-border">
+      <Section className="bg-[#EBE9E5] border-t-2 border-[#9B8B7E] py-16">
         <div className="text-center space-y-6">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Tell Us Your Requirement</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             We&apos;ll find the right solution and team for your project.
           </p>
-          <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-white">
+          <Button asChild size="lg" className="bg-[#D4A574] hover:bg-[#B8860B] text-white">
             <Link href="/contact">
               Submit Your Service Request
               <ArrowRight className="ml-2 h-4 w-4" />

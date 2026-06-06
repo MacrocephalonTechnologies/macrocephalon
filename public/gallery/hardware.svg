@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+    <radialGradient id="redglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff2200" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#cc1100" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ff0000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pinkglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff88cc" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#cc4499" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ff00aa" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cyanglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00ffcc" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#00ccaa" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#00ff88" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blueglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4466ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#2233cc" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur4">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="blur8">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="blur16">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+
+  <!-- Dark ambient background -->
+  <rect width="1200" height="750" fill="url(#bg)"/>
+
+  <!-- Ambient light bleed from bulbs onto background -->
+  <ellipse cx="820" cy="160" rx="200" ry="180" fill="#ff2200" opacity="0.12" filter="url(#blur16)"/>
+  <ellipse cx="820" cy="400" rx="180" ry="160" fill="#ff44aa" opacity="0.10" filter="url(#blur16)"/>
+  <ellipse cx="820" cy="620" rx="200" ry="180" fill="#00ffcc" opacity="0.12" filter="url(#blur16)"/>
+  <!-- Floor glow -->
+  <ellipse cx="900" cy="720" rx="220" ry="40" fill="#00cc88" opacity="0.15" filter="url(#blur8)"/>
+
+  <!-- Wooden table surface (dark reddish) -->
+  <rect x="0" y="0" width="500" height="400" fill="#1a0a06" opacity="0.6"/>
+  <!-- Wood grain lines -->
+  <line x1="0" y1="80" x2="480" y2="100" stroke="#2a1008" stroke-width="2" opacity="0.5"/>
+  <line x1="0" y1="160" x2="480" y2="175" stroke="#2a1008" stroke-width="1.5" opacity="0.4"/>
+  <line x1="0" y1="240" x2="480" y2="250" stroke="#2a1008" stroke-width="2" opacity="0.5"/>
+  <line x1="0" y1="320" x2="480" y2="330" stroke="#2a1008" stroke-width="1" opacity="0.3"/>
+
+  <!-- Transparent plastic box -->
+  <rect x="120" y="160" width="480" height="340" rx="16" fill="#e8f0f0" opacity="0.08" stroke="#aacccc" stroke-width="2"/>
+  <!-- Box top face -->
+  <rect x="120" y="160" width="480" height="340" rx="16" fill="none" stroke="#88aaaa" stroke-width="1.5" opacity="0.4"/>
+  <!-- Box shine/reflection -->
+  <rect x="128" y="168" width="120" height="8" rx="4" fill="white" opacity="0.15"/>
+  <rect x="128" y="168" width="8" height="80" rx="4" fill="white" opacity="0.12"/>
+
+  <!-- Arduino board inside box -->
+  <rect x="200" y="300" width="200" height="130" rx="4" fill="#1a3a5a" stroke="#2a5a8a" stroke-width="1.5"/>
+  <!-- Arduino text -->
+  <text x="260" y="390" font-family="Arial" font-size="14" font-weight="bold" fill="#3a7aaa" opacity="0.8">ARDUINO</text>
+  <!-- Arduino pins -->
+  <g fill="#c8960a">
+    <rect x="205" y="296" width="4" height="8"/>
+    <rect x="213" y="296" width="4" height="8"/>
+    <rect x="221" y="296" width="4" height="8"/>
+    <rect x="229" y="296" width="4" height="8"/>
+    <rect x="237" y="296" width="4" height="8"/>
+    <rect x="245" y="296" width="4" height="8"/>
+    <rect x="253" y="296" width="4" height="8"/>
+    <rect x="261" y="296" width="4" height="8"/>
+    <rect x="269" y="296" width="4" height="8"/>
+    <rect x="277" y="296" width="4" height="8"/>
+    <rect x="285" y="296" width="4" height="8"/>
+    <rect x="293" y="296" width="4" height="8"/>
+    <rect x="301" y="296" width="4" height="8"/>
+    <rect x="309" y="296" width="4" height="8"/>
+  </g>
+  <!-- USB connector -->
+  <rect x="200" y="345" width="20" height="30" rx="2" fill="#2a5a8a"/>
+  <!-- ATmega chip -->
+  <rect x="280" y="320" width="50" height="50" rx="2" fill="#111120" stroke="#333345" stroke-width="1"/>
+  <text x="305" y="347" font-family="monospace" font-size="6" fill="#444466" text-anchor="middle">ATmega</text>
+  <text x="305" y="356" font-family="monospace" font-size="6" fill="#444466" text-anchor="middle">328P</text>
+
+  <!-- Wires inside box - yellow, red, orange -->
+  <path d="M 240 310 Q 300 280 380 310 Q 420 325 450 300" fill="none" stroke="#f5c518" stroke-width="3" opacity="0.8"/>
+  <path d="M 220 330 Q 310 300 400 330 Q 440 340 470 320" fill="none" stroke="#ff4422" stroke-width="3" opacity="0.8"/>
+  <path d="M 260 350 Q 330 320 410 350 Q 450 360 480 340" fill="none" stroke="#ff8822" stroke-width="3" opacity="0.8"/>
+  <path d="M 230 370 Q 320 340 420 365 Q 455 375 475 355" fill="none" stroke="#f5c518" stroke-width="2.5" opacity="0.7"/>
+
+  <!-- Blue glow dot (Arduino power LED) -->
+  <circle cx="370" cy="315" r="4" fill="#4488ff"/>
+  <circle cx="370" cy="315" r="10" fill="#4488ff" opacity="0.3" filter="url(#blur4)"/>
+  <!-- Red LED -->
+  <circle cx="215" cy="425" r="3" fill="#ff2200"/>
+  <circle cx="215" cy="425" r="8" fill="#ff2200" opacity="0.4" filter="url(#blur4)"/>
+
+  <!-- Box side holes for bulb sockets -->
+  <rect x="596" y="200" width="30" height="50" rx="6" fill="#334444" stroke="#445555" stroke-width="1"/>
+  <rect x="596" y="420" width="30" height="50" rx="6" fill="#334444" stroke="#445555" stroke-width="1"/>
+  <rect x="596" y="620" width="30" height="50" rx="6" fill="#334444" stroke="#445555" stroke-width="1"/>
+
+  <!-- ===== BULB 1 - RED ===== -->
+  <!-- Socket -->
+  <rect x="626" y="185" width="50" height="65" rx="8" fill="#e8e0d8" stroke="#c0b8b0" stroke-width="1.5"/>
+  <!-- Socket ridges -->
+  <line x1="626" y1="200" x2="676" y2="200" stroke="#c0b8b0" stroke-width="1"/>
+  <line x1="626" y1="212" x2="676" y2="212" stroke="#c0b8b0" stroke-width="1"/>
+  <line x1="626" y1="224" x2="676" y2="224" stroke="#c0b8b0" stroke-width="1"/>
+  <!-- Bulb globe -->
+  <ellipse cx="651" cy="148" rx="52" ry="52" fill="#ffdddd" opacity="0.6"/>
+  <ellipse cx="651" cy="148" rx="52" ry="52" fill="url(#redglow)" filter="url(#blur4)"/>
+  <ellipse cx="651" cy="148" rx="48" ry="48" fill="white" opacity="0.85"/>
+  <ellipse cx="651" cy="148" rx="48" ry="48" fill="#ff3300" opacity="0.5"/>
+  <!-- Glow around bulb -->
+  <ellipse cx="651" cy="148" rx="90" ry="90" fill="#ff2200" opacity="0.25" filter="url(#blur8)"/>
+  <ellipse cx="651" cy="148" rx="130" ry="110" fill="#ff1100" opacity="0.12" filter="url(#blur16)"/>
+  <!-- Shine -->
+  <ellipse cx="632" cy="128" rx="14" ry="10" fill="white" opacity="0.5"/>
+
+  <!-- ===== BULB 2 - PINK/PURPLE ===== -->
+  <rect x="626" y="400" width="50" height="65" rx="8" fill="#e8e0d8" stroke="#c0b8b0" stroke-width="1.5"/>
+  <line x1="626" y1="415" x2="676" y2="415" stroke="#c0b8b0" stroke-width="1"/>
+  <line x1="626" y1="427" x2="676" y2="427" stroke="#c0b8b0" stroke-width="1"/>
+  <line x1="626" y1="439" x2="676" y2="439" stroke="#c0b8b0" stroke-width="1"/>
+  <ellipse cx="651" cy="365" rx="50" ry="50" fill="white" opacity="0.8"/>
+  <ellipse cx="651" cy="365" rx="50" ry="50" fill="#ff66cc" opacity="0.55"/>
+  <ellipse cx="651" cy="365" rx="85" ry="85" fill="#ff44aa" opacity="0.2" filter="url(#blur8)"/>
+  <ellipse cx="651" cy="365" rx="120" ry="110" fill="#ff22aa" opacity="0.10" filter="url(#blur16)"/>
+  <ellipse cx="632" cy="345" rx="14" ry="10" fill="white" opacity="0.45"/>
+
+  <!-- ===== BULB 3 - CYAN/GREEN ===== -->
+  <rect x="626" y="610" width="50" height="65" rx="8" fill="#e8e0d8" stroke="#c0b8b0" stroke-width="1.5"/>
+  <line x1="626" y1="625" x2="676" y2="625" stroke="#c0b8b0" stroke-width="1"/>
+  <line x1="626" y1="637" x2="676" y2="637" stroke="#c0b8b0" stroke-width="1"/>
+  <line x1="626" y1="649" x2="676" y2="649" stroke="#c0b8b0" stroke-width="1"/>
+  <ellipse cx="651" cy="575" rx="50" ry="50" fill="white" opacity="0.85"/>
+  <ellipse cx="651" cy="575" rx="50" ry="50" fill="#00ffaa" opacity="0.5"/>
+  <ellipse cx="651" cy="575" rx="85" ry="85" fill="#00ffcc" opacity="0.22" filter="url(#blur8)"/>
+  <ellipse cx="651" cy="575" rx="130" ry="120" fill="#00dd88" opacity="0.12" filter="url(#blur16)"/>
+  <ellipse cx="632" cy="555" rx="14" ry="10" fill="white" opacity="0.5"/>
+
+  <!-- Green LED dot on floor -->
+  <circle cx="720" cy="710" r="5" fill="#00ff66"/>
+  <circle cx="720" cy="710" r="20" fill="#00ff66" opacity="0.3" filter="url(#blur4)"/>
+
+  <!-- Power cable -->
+  <path d="M 300 500 Q 300 600 280 680 Q 270 720 250 740" fill="none" stroke="#111" stroke-width="6"/>
+  <path d="M 350 500 Q 360 580 370 650 Q 380 700 390 740" fill="none" stroke="#111" stroke-width="5"/>
+
+  <!-- Small sticker on box -->
+  <rect x="360" y="280" width="40" height="25" rx="3" fill="white" opacity="0.9"/>
+  <text x="380" y="297" font-family="Arial" font-size="7" fill="#333" text-anchor="middle">myPlast</text>
+
+  <!-- Labels -->
+  <text x="80" y="710" font-family="Arial" font-size="14" fill="#888" opacity="0.7">IoT Smart Lighting Control System — Arduino + RGB Bulbs</text>
+</svg>

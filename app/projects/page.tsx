@@ -24,13 +24,13 @@ export default function Projects() {
   const getLevelColor = (level: string) => {
     switch (level) {
       case 'beginner':
-        return 'bg-blue-500/10 text-blue-400';
+        return 'bg-[#D4A574]/10 text-[#D4A574]';
       case 'intermediate':
-        return 'bg-green-500/10 text-green-400';
+        return 'bg-[#D4A574]/10 text-[#D4A574]';
       case 'advanced':
-        return 'bg-orange-500/10 text-orange-400';
+        return 'bg-[#D4A574]/10 text-[#D4A574]';
       case 'phd':
-        return 'bg-purple-500/10 text-purple-400';
+        return 'bg-[#D4A574]/10 text-[#D4A574]';
       default:
         return 'bg-muted text-muted-foreground';
     }
@@ -117,8 +117,8 @@ export default function Projects() {
                   onClick={() => setSelectedCategory(cat.value)}
                   className={
                     selectedCategory === cat.value
-                      ? 'bg-secondary hover:bg-secondary/90'
-                      : 'border-border hover:border-primary'
+                      ? 'bg-[#D4A574] hover:bg-[#B8860B]'
+                      : 'border-2 border-[#D4CCBF] shadow-md hover:border-primary'
                   }
                 >
                   {cat.label}
@@ -136,8 +136,8 @@ export default function Projects() {
                 onClick={() => setSelectedBranch('all')}
                 className={
                   selectedBranch === 'all'
-                    ? 'bg-secondary hover:bg-secondary/90'
-                    : 'border-border hover:border-primary'
+                    ? 'bg-[#D4A574] hover:bg-[#B8860B]'
+                    : 'border-2 border-[#D4CCBF] shadow-md hover:border-primary'
                 }
               >
                 All Branches
@@ -150,8 +150,8 @@ export default function Projects() {
                   onClick={() => setSelectedBranch(branch)}
                   className={
                     selectedBranch === branch
-                      ? 'bg-secondary hover:bg-secondary/90'
-                      : 'border-border hover:border-primary'
+                      ? 'bg-[#D4A574] hover:bg-[#B8860B]'
+                      : 'border-2 border-[#D4CCBF] shadow-md hover:border-primary'
                   }
                 >
                   {branch}
@@ -173,7 +173,7 @@ export default function Projects() {
         {filteredProjects.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project) => (
-              <Card key={project.id} className="bg-card border-border hover:border-primary/50 transition-all flex flex-col">
+              <Card key={project.id} className="bg-white border-2 border-[#D4CCBF] shadow-md hover:border-primary/50 transition-all flex flex-col">
                 <CardHeader>
                   <div className="flex items-start justify-between gap-2 mb-2">
                     <Badge variant="outline" className="border-muted-foreground/50 text-muted-foreground">
@@ -192,7 +192,7 @@ export default function Projects() {
                       <p className="text-xs font-semibold text-foreground mb-2">Tech Stack</p>
                       <div className="flex flex-wrap gap-1">
                         {project.techStack.map((tech, idx) => (
-                          <Badge key={idx} variant="secondary" className="text-xs">
+                          <Badge key={idx} className="text-xs bg-[#D4A574] hover:bg-[#B8860B] text-white">
                             {tech}
                           </Badge>
                         ))}
@@ -221,13 +221,13 @@ export default function Projects() {
       </Section>
 
       {/* CTA Section */}
-      <Section className="bg-card border-t border-border">
+      <Section className="bg-[#EBE9E5] border-t-2 border-[#9B8B7E] py-16">
         <div className="text-center space-y-6">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Want a Similar Project?</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Contact us to discuss how we can help you build your next technical project.
           </p>
-          <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-white">
+          <Button asChild size="lg" className="bg-[#D4A574] hover:bg-[#B8860B] text-white">
             <Link href="/contact">Get in Touch</Link>
           </Button>
         </div>

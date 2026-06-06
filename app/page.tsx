@@ -63,7 +63,7 @@ export default function Home() {
       <HeroSection />
 
       {/* What We Do Section */}
-      <Section>
+      <Section className="border-t-2 border-b-2 border-[#9B8B7E] pt-16 pb-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">What We Do</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -71,18 +71,18 @@ export default function Home() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="bg-card border-border hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10">
+          <Card className="bg-white border-2 border-[#D4CCBF] shadow-md hover:border-[#D4A574] transition-all hover:shadow-lg">
             <CardHeader>
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <Code2 className="h-6 w-6 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-[#D4A574]/10 flex items-center justify-center mb-4">
+                <Code2 className="h-6 w-6 text-[#D4A574]" />
               </div>
-              <CardTitle>Software &amp; Services</CardTitle>
+              <CardTitle className="text-[#1F2937]">Software &amp; Services</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2">
-              <p className="text-muted-foreground text-sm">
+              <p className="text-[#6B7280] text-sm">
                 Web development, custom software, SaaS platforms, and full-stack solutions.
               </p>
-              <ul className="text-xs text-muted-foreground space-y-1">
+              <ul className="text-xs text-[#6B7280] space-y-1">
                 <li>✓ React, Next.js, Vue</li>
                 <li>✓ Desktop &amp; Mobile Apps</li>
                 <li>✓ API &amp; Database Design</li>
@@ -90,18 +90,18 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="bg-card border-border hover:border-secondary/50 transition-all hover:shadow-lg hover:shadow-secondary/10">
+          <Card className="bg-white border-2 border-[#D4CCBF] shadow-md hover:border-[#D4A574] transition-all hover:shadow-lg">
             <CardHeader>
-              <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
-                <Brain className="h-6 w-6 text-secondary" />
+              <div className="w-12 h-12 rounded-lg bg-[#D4A574]/10 flex items-center justify-center mb-4">
+                <Brain className="h-6 w-6 text-[#D4A574]" />
               </div>
-              <CardTitle>AI &amp; Machine Learning</CardTitle>
+              <CardTitle className="text-[#1F2937]">AI &amp; Machine Learning</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2">
-              <p className="text-muted-foreground text-sm">
+              <p className="text-[#6B7280] text-sm">
                 AI model development, LLM integration, and intelligent automation.
               </p>
-              <ul className="text-xs text-muted-foreground space-y-1">
+              <ul className="text-xs text-[#6B7280] space-y-1">
                 <li>✓ LLM Integration &amp; Fine-tuning</li>
                 <li>✓ Computer Vision &amp; NLP</li>
                 <li>✓ Edge AI Deployment</li>
@@ -109,18 +109,18 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="bg-card border-border hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10">
+          <Card className="bg-white border-2 border-[#D4CCBF] shadow-md hover:border-[#D4A574] transition-all hover:shadow-lg">
             <CardHeader>
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <Wrench className="h-6 w-6 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-[#D4A574]/10 flex items-center justify-center mb-4">
+                <Wrench className="h-6 w-6 text-[#D4A574]" />
               </div>
-              <CardTitle>Engineering Projects</CardTitle>
+              <CardTitle className="text-[#1F2937]">Engineering Projects</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2">
-              <p className="text-muted-foreground text-sm">
+              <p className="text-[#6B7280] text-sm">
                 Academic projects, research support, and real-world engineering solutions.
               </p>
-              <ul className="text-xs text-muted-foreground space-y-1">
+              <ul className="text-xs text-[#6B7280] space-y-1">
                 <li>✓ PhD to Diploma Support</li>
                 <li>✓ Hardware &amp; Embedded</li>
                 <li>✓ Research Publishing</li>
@@ -131,7 +131,7 @@ export default function Home() {
       </Section>
 
       {/* Why Macrocephalon Section */}
-      <Section className="bg-muted/50">
+      <Section className="bg-[#EBE9E5] border-t-2 border-b-2 border-[#9B8B7E] py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Why Macrocephalon</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -149,8 +149,8 @@ export default function Home() {
             const Icon = item.icon;
             return (
               <div key={idx} className="text-center">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                  <Icon className="h-5 w-5 text-primary" />
+                <div className="w-14 h-14 rounded-full bg-white border-2 border-[#D4CCBF] shadow-md flex items-center justify-center mx-auto mb-3">
+                  <Icon className="h-6 w-6 text-[#D4A574]" />
                 </div>
                 <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
                 <p className="text-xs text-muted-foreground">{item.desc}</p>
@@ -161,42 +161,42 @@ export default function Home() {
       </Section>
 
       {/* Services Grid Section */}
-      <Section>
+      <Section className="border-t-2 border-b-2 border-[#9B8B7E] pt-16 pb-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Our Services</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Complete range of solutions across IT, AI, and engineering disciplines.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredServices.map((service) => service && (
             <Link
               key={service.slug}
               href={`/services#${service.slug}`}
-              className="block p-4 rounded-lg border border-border hover:border-primary/50 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/5"
+              className="block p-6 rounded-lg border-2 border-[#B8ADA0] bg-white shadow-md hover:border-[#D4A574] hover:shadow-lg transition-all hover:-translate-y-1"
             >
-              <h3 className="font-semibold text-foreground mb-1">{service.title}</h3>
-              <p className="text-xs text-muted-foreground">
+              <h3 className="font-semibold text-[#1F2937] mb-2 text-lg">{service.title}</h3>
+              <p className="text-sm text-[#6B7280] leading-relaxed">
                 {service.description}
               </p>
             </Link>
           ))}
         </div>
         <div className="text-center mt-8">
-          <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary/10">
+          <Button asChild variant="outline" className="border-2 border-[#D4A574] text-[#D4A574] hover:bg-[#D4A574] hover:text-white hover:border-[#D4A574] transition-all">
             <Link href="/services">View All Services →</Link>
           </Button>
         </div>
       </Section>
 
       {/* CTA Section */}
-      <Section className="bg-card border-t border-border">
+      <Section className="bg-[#EBE9E5] border-t-2 border-b-2 border-[#9B8B7E] py-16 mb-4">
         <div className="text-center space-y-6">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Have a Project in Mind?</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1F2937]">Have a Project in Mind?</h2>
+          <p className="text-[#6B7280] max-w-2xl mx-auto text-lg">
             Let&apos;s discuss how Macrocephalon can deliver cutting-edge solutions for your goals.
           </p>
-          <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-white">
+          <Button asChild size="lg" className="bg-[#D4A574] hover:bg-[#B8860B] text-white">
             <Link href="/contact">Submit Your Service Request</Link>
           </Button>
         </div>

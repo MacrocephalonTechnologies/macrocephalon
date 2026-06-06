@@ -165,7 +165,7 @@ export default function Academic() {
           {pillars.map((pillar) => (
             <article
               key={pillar.title}
-              className="group overflow-hidden rounded-xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10"
+              className="group overflow-hidden rounded-xl border border-2 border-[#D4CCBF] shadow-md bg-white transition-all hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10"
             >
               <div className="aspect-[16/10] overflow-hidden bg-black">
                 <img
@@ -193,7 +193,7 @@ export default function Academic() {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {researchAreas.map((area) => (
-            <Card key={area.title} className="overflow-hidden border-border bg-card transition-all hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10">
+            <Card key={area.title} className="overflow-hidden border-2 border-[#D4CCBF] shadow-md bg-white transition-all hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10">
               <div className="aspect-[16/9] overflow-hidden bg-black">
                 <img src={area.image} alt={area.title} className="h-full w-full object-cover" />
               </div>
@@ -213,7 +213,7 @@ export default function Academic() {
 
       <Section>
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-          <div className="overflow-hidden rounded-xl border border-border bg-card">
+          <div className="overflow-hidden rounded-xl border border-2 border-[#D4CCBF] shadow-md bg-white">
             <img src="/academic/publications.png" alt="Recent publications" className="h-72 w-full object-cover" />
             <div className="p-6">
               <h2 className="text-3xl font-bold text-foreground">Recent Publications</h2>
@@ -225,7 +225,7 @@ export default function Academic() {
 
           <div className="space-y-4">
             {publications.map((pub) => (
-              <div key={pub.title} className="rounded-lg border border-border bg-card p-5 transition-colors hover:border-primary/50">
+              <div key={pub.title} className="rounded-lg border border-2 border-[#D4CCBF] shadow-md bg-white p-5 transition-colors hover:border-primary/50">
                 <h3 className="font-semibold text-foreground">{pub.title}</h3>
                 <p className="mt-2 text-sm text-primary">{pub.venue}</p>
                 <p className="mt-2 text-xs text-muted-foreground">{pub.authors}</p>
@@ -247,11 +247,11 @@ export default function Academic() {
           <img
             src="/academic/speaking-engagements.png"
             alt="Academic speaking engagements"
-            className="h-full min-h-[360px] rounded-xl border border-border object-cover"
+            className="h-full min-h-[360px] rounded-xl border border-2 border-[#D4CCBF] shadow-md object-cover"
           />
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {speakingEngagements.map((engagement) => (
-              <Card key={engagement.event} className="border-border bg-card">
+              <Card key={engagement.event} className="border-2 border-[#D4CCBF] shadow-md bg-white">
                 <CardHeader>
                   <CardTitle className="text-lg text-primary">{engagement.event}</CardTitle>
                   <CardDescription>{engagement.topic}</CardDescription>
@@ -270,7 +270,7 @@ export default function Academic() {
           <img
             src="/academic/recognition-awards.png"
             alt="Certifications and awards"
-            className="h-[360px] rounded-xl border border-border object-cover"
+            className="h-[360px] rounded-xl border border-2 border-[#D4CCBF] shadow-md object-cover"
           />
           <div>
             <h2 className="mb-8 text-3xl font-bold text-foreground sm:text-4xl">Certifications & Awards</h2>
@@ -283,7 +283,7 @@ export default function Academic() {
                 'Best Enterprise Solutions Partner',
                 'Customer Choice Award 2024',
               ].map((cert) => (
-                <div key={cert} className="rounded-lg border border-border bg-card p-4 text-center transition-colors hover:border-primary/50">
+                <div key={cert} className="rounded-lg border border-2 border-[#D4CCBF] shadow-md bg-white p-4 text-center transition-colors hover:border-primary/50">
                   <p className="font-medium text-foreground">{cert}</p>
                 </div>
               ))}
@@ -292,7 +292,7 @@ export default function Academic() {
         </div>
       </Section>
 
-      <Section className="bg-card border-t border-border">
+      <Section className="bg-white border-t border-2 border-[#D4CCBF] shadow-md">
         <div className="space-y-6 text-center">
           <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Interested in Collaborating?</h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
