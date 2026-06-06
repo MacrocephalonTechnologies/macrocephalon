@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { Section } from '@/components/section';
 import { PageHeader } from '@/components/page-header';
-import { Check, Clock, Mail, MapPin, Send } from 'lucide-react';
+import { Check, Clock, Mail, MapPin, Send, Globe2, Linkedin, Facebook, Twitter, Github, Instagram, Youtube } from 'lucide-react';
 
 const serviceOptions = [
   'Web Development',
@@ -39,6 +39,51 @@ const supportNeeds = [
   'Hardware design',
   'Documentation',
   'Deployment',
+];
+
+const socialLinks = [
+  {
+    name: 'Website',
+    url: 'https://www.macrocephalon.com',
+    icon: Globe2,
+    label: '🌐 Website',
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/company/macrocephalon/',
+    icon: Linkedin,
+    label: '💼 LinkedIn',
+  },
+  {
+    name: 'Facebook',
+    url: 'https://www.facebook.com/macrocephalontechnologies/',
+    icon: Facebook,
+    label: '📘 Facebook',
+  },
+  {
+    name: 'X (Twitter)',
+    url: 'https://x.com/macrocephalons',
+    icon: Twitter,
+    label: '🐦 X (Twitter)',
+  },
+  {
+    name: 'GitHub',
+    url: 'https://github.com/MacrocephalonTechnologies',
+    icon: Github,
+    label: '💻 GitHub',
+  },
+  {
+    name: 'Instagram',
+    url: 'https://www.instagram.com/macrocephalontechnologies/',
+    icon: Instagram,
+    label: '📸 Instagram',
+  },
+  {
+    name: 'YouTube',
+    url: 'https://www.youtube.com/@macrocephalontechnologies',
+    icon: Youtube,
+    label: '▶️ YouTube',
+  },
 ];
 
 export default function Contact() {
@@ -164,6 +209,30 @@ export default function Contact() {
                 </div>
               );
             })}
+
+            {/* Social Media Links */}
+            <div className="rounded-xl border border-[#C9A84C]/15 bg-black/35 p-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground mb-4">
+                Follow Us On Social Media
+              </p>
+              <div className="grid grid-cols-2 gap-3">
+                {socialLinks.map((social) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={social.name}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 rounded-lg border border-[#C9A84C]/25 bg-black/35 px-3 py-2 text-xs font-medium text-foreground hover:bg-[#FF7A18]/15 hover:border-[#FF7A18]/50 hover:text-[#FFD48A] transition-colors"
+                    >
+                      <Icon className="h-4 w-4" />
+                      <span>{social.name}</span>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
           </aside>
 
           <Card id="service-request-form" className="border-[#C9A84C]/15 bg-black/50 shadow-2xl shadow-black/20">
