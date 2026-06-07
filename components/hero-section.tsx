@@ -103,7 +103,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative w-full max-w-full overflow-hidden pt-80 pb-24 sm:pt-72 sm:pb-28 lg:pt-80 lg:pb-32">
+    <section className="relative w-full max-w-full overflow-hidden pt-[22rem] pb-24 sm:pt-72 sm:pb-28 lg:pt-80 lg:pb-32">
       <div className="absolute top-1/4 left-1/4 w-96 h-96 -z-10 blur-3xl rounded-full" style={{ background: 'radial-gradient(circle, rgba(0, 0, 0, 0.05), transparent 70%)' }} />
       <div className="absolute bottom-1/3 right-1/4 w-80 h-80 -z-10 blur-3xl rounded-full" style={{ background: 'radial-gradient(circle, rgba(0, 0, 0, 0.03), transparent 70%)' }} />
 
@@ -123,10 +123,10 @@ export function HeroSection() {
         />
       ))}
 
-      <Link href="/" className="golden-ring logo-ring absolute left-0 right-0 top-8 z-[4] mx-auto h-44 w-44 sm:left-16 sm:right-auto sm:top-8 sm:mx-0 sm:h-48 sm:w-48 lg:top-10 lg:left-16 lg:h-56 lg:w-56" aria-label="Go to home page">
-        <img src="/logo-cl-version-circle.png" alt="Macrocephalon logo" />
+      <Link href="/" className="logo-ring rounded-full absolute left-0 right-0 top-6 z-[4] mx-auto h-48 w-48 sm:left-16 sm:right-auto sm:top-8 sm:mx-0 sm:h-48 sm:w-48 lg:top-10 lg:left-16 lg:h-56 lg:w-56" aria-label="Go to home page">
+        <img src="/logo-trademark.png" alt="Macrocephalon logo" className="w-full h-full object-contain" />
       </Link>
-      <Link href="/" className="absolute left-0 right-0 top-60 z-[5] mx-auto block w-[min(92vw,570px)] text-center sm:left-72 sm:right-auto sm:top-24 sm:mx-0 sm:w-[min(62vw,570px)] lg:left-88 lg:top-28" aria-label="Go to home page">
+      <Link href="/" className="absolute left-0 right-0 top-[14.5rem] z-[5] mx-auto block w-[min(92vw,570px)] text-center sm:left-72 sm:right-auto sm:top-24 sm:mx-0 sm:w-[min(62vw,570px)] lg:left-88 lg:top-28" aria-label="Go to home page">
         <div className="text-[1.35rem] font-bold leading-none tracking-normal text-black sm:text-5xl sm:tracking-wide lg:text-6xl">
           MACROCEPHALON
         </div>

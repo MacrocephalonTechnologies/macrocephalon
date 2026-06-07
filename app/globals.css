@@ -174,13 +174,11 @@
   }
 
   .logo-ring img {
-    width: 94%;
-    height: 94%;
-    border-radius: 50%;
-    clip-path: circle(50%);
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     object-position: center;
-    filter: none;
+    display: block;
   }
 
   /* Clean Professional Panel */
