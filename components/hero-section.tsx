@@ -193,7 +193,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        {activeSlide && <div className="relative overflow-hidden rounded-3xl border-2 border-[#9B8B7E] bg-[#FDF6EE] shadow-xl sm:bg-[#FDF6EE]">
+        {activeSlide && <div className="relative overflow-hidden rounded-3xl border-2 border-[#9B8B7E] bg-[#FDF6EE] shadow-md sm:bg-[#FDF6EE]">
           <div className="group/gallery relative sm:h-[430px] lg:h-[500px]">
             <Link
               href={activeSlide?.href ?? '/services'}
@@ -207,7 +207,7 @@ export function HeroSection() {
                 alt={activeSlide?.label}
                 className="h-full w-full object-cover"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#FDF6EE] via-transparent to-transparent" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#4A3020]/70 via-[#4A3020]/10 to-transparent" />
             </div>
             <img
               key={activeSlide?.src}
@@ -218,7 +218,7 @@ export function HeroSection() {
             <div className="pointer-events-none absolute left-5 top-5 z-30 rounded-full border border-[#D4A574]/60 bg-[#4A3020]/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#D4A574]">
               {activeSlide?.eyebrow ?? activeSlide?.label}
             </div>
-            <div className="pointer-events-none relative z-30 p-8 sm:absolute sm:bottom-8 sm:left-8 sm:right-5 sm:max-w-xl sm:rounded-xl sm:border sm:border-[#D4A574]/30 sm:bg-[#4A3020]/85 sm:p-5 sm:shadow-xl sm:shadow-[#4A3020]/40 sm:backdrop-blur-md">
+            <div className="pointer-events-none relative z-30 bg-[#4A3020] px-6 py-5 rounded-b-3xl sm:absolute sm:bottom-8 sm:left-8 sm:right-5 sm:max-w-xl sm:rounded-xl sm:border sm:border-[#D4A574]/30 sm:bg-[#4A3020]/85 sm:px-5 sm:py-5 sm:shadow-lg sm:shadow-[#4A3020]/40 sm:backdrop-blur-md sm:rounded-b-none">
               <h2 className="text-3xl font-bold leading-tight text-white sm:text-3xl">{activeSlide?.title ?? activeSlide?.label}</h2>
               <p className="mt-5 text-base leading-8 text-[#D4C4A8] sm:mt-2 sm:text-base sm:leading-6">
                 {activeSlide?.description ?? 'Explore connected service details and implementation support.'}
