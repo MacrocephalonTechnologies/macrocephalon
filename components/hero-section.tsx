@@ -207,7 +207,7 @@ export function HeroSection() {
                 alt={activeSlide?.label}
                 className="h-full w-full object-cover"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#FDF6EE] via-transparent to-transparent" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#FDF6EE]/50 via-transparent to-transparent" />
             </div>
             <img
               key={activeSlide?.src}
