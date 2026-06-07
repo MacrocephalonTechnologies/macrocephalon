@@ -193,27 +193,27 @@ export function HeroSection() {
           </div>
         </div>
 
-        {activeSlide && <div className="relative overflow-hidden rounded-3xl border-2 border-[#9B8B7E] bg-[#7A5230] shadow-xl sm:bg-[#7A5230]">
+        {activeSlide && <div className="relative overflow-hidden rounded-3xl border-2 border-[#9B8B7E] bg-white shadow-xl sm:bg-[#F8F7F5]">
           <div className="group/gallery relative sm:h-[430px] lg:h-[500px]">
             <img
               src={activeSlide?.src}
               alt={activeSlide?.label}
               className="pointer-events-none hidden sm:absolute sm:inset-0 sm:block sm:h-full sm:w-full sm:scale-110 sm:object-cover sm:opacity-25 sm:blur-xl"
             />
-            <div className="pointer-events-none hidden sm:absolute sm:inset-0 sm:block sm:bg-gradient-to-b sm:from-[#7A5230]/30 sm:via-transparent sm:to-[#7A5230]/60" />
+            <div className="pointer-events-none hidden sm:absolute sm:inset-0 sm:block sm:bg-gradient-to-b sm:from-white/10 sm:via-transparent sm:to-[#1F2937]/50" />
             <Link
               href={activeSlide?.href ?? '/services'}
               className="absolute inset-0 z-20"
               aria-label={`Open ${activeSlide?.title ?? activeSlide?.label} service details`}
             />
-            <div className="relative aspect-[16/10] overflow-hidden bg-[#7A5230] sm:hidden">
+            <div className="relative aspect-[16/10] overflow-hidden bg-[#F8F7F5] sm:hidden">
               <img
                 key={`mobile-${activeSlide?.src}`}
                 src={activeSlide?.src}
                 alt={activeSlide?.label}
                 className="h-full w-full object-cover"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#7A5230] via-transparent to-transparent" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#F8F7F5] via-transparent to-transparent" />
             </div>
             <img
               key={activeSlide?.src}
@@ -221,10 +221,10 @@ export function HeroSection() {
               alt={activeSlide?.label}
               className="pointer-events-none relative z-10 hidden h-full w-full object-contain transition-opacity duration-500 group-hover/gallery:scale-[1.01] sm:block"
             />
-            <div className="pointer-events-none absolute left-5 top-5 z-30 rounded-full border border-[#D4A574]/50 bg-[#7A5230]/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#D4A574]">
+            <div className="pointer-events-none absolute left-5 top-5 z-30 rounded-full border border-[#D4A574]/50 bg-[#1F2937]/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#D4A574]">
               {activeSlide?.eyebrow ?? activeSlide?.label}
             </div>
-            <div className="pointer-events-none relative z-30 p-8 sm:absolute sm:bottom-8 sm:left-8 sm:right-5 sm:max-w-xl sm:rounded-xl sm:border sm:border-[#D4A574]/30 sm:bg-[#7A5230]/80 sm:p-5 sm:shadow-xl sm:shadow-[#7A5230]/50 sm:backdrop-blur-md">
+            <div className="pointer-events-none relative z-30 p-8 sm:absolute sm:bottom-8 sm:left-8 sm:right-5 sm:max-w-xl sm:rounded-xl sm:border sm:border-[#D4A574]/30 sm:bg-[#1F2937]/80 sm:p-5 sm:shadow-xl sm:shadow-[#1F2937]/50 sm:backdrop-blur-md">
               <h2 className="text-3xl font-bold leading-tight text-white sm:text-3xl">{activeSlide?.title ?? activeSlide?.label}</h2>
               <p className="mt-5 text-base leading-8 text-[#D4C4A8] sm:mt-2 sm:text-base sm:leading-6">
                 {activeSlide?.description ?? 'Explore connected service details and implementation support.'}
@@ -241,7 +241,7 @@ export function HeroSection() {
                 event.preventDefault();
                 goToPreviousSlide();
               }}
-              className="absolute left-4 top-[29%] z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-[#D4A574]/40 bg-[#7A5230]/80 text-[#D4A574] shadow-lg shadow-[#7A5230]/50 transition-colors hover:bg-[#D4A574]/20 sm:top-1/2 sm:h-12 sm:w-12"
+              className="absolute left-4 top-[29%] z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-[#D4A574]/40 bg-[#1F2937]/80 text-[#D4A574] shadow-lg shadow-[#1F2937]/50 transition-colors hover:bg-[#D4A574]/20 sm:top-1/2 sm:h-12 sm:w-12"
               aria-label="Previous gallery slide"
             >
               <ChevronLeft className="h-7 w-7" />
@@ -252,13 +252,13 @@ export function HeroSection() {
                 event.preventDefault();
                 goToNextSlide();
               }}
-              className="absolute right-4 top-[29%] z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-[#D4A574]/40 bg-[#7A5230]/80 text-[#D4A574] shadow-lg shadow-[#7A5230]/50 transition-colors hover:bg-[#D4A574]/20 sm:top-1/2 sm:h-12 sm:w-12"
+              className="absolute right-4 top-[29%] z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-[#D4A574]/40 bg-[#1F2937]/80 text-[#D4A574] shadow-lg shadow-[#1F2937]/50 transition-colors hover:bg-[#D4A574]/20 sm:top-1/2 sm:h-12 sm:w-12"
               aria-label="Next gallery slide"
             >
               <ChevronRight className="h-7 w-7" />
             </button>
 
-            <div className="relative bottom-auto left-1/2 z-30 mb-8 flex w-fit -translate-x-1/2 gap-2 rounded-full border border-[#D4A574]/30 bg-[#7A5230]/70 px-3 py-2 sm:absolute sm:bottom-5 sm:mb-0">
+            <div className="relative bottom-auto left-1/2 z-30 mb-8 flex w-fit -translate-x-1/2 gap-2 rounded-full border border-[#D4A574]/30 bg-[#1F2937]/70 px-3 py-2 sm:absolute sm:bottom-5 sm:mb-0">
               {galleryImages.map((slide, index) => (
                 <button
                   key={slide.src}
