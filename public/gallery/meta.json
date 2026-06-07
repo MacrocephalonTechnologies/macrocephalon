@@ -1,0 +1,7 @@
+{
+  "ai.png":          { "title": "AI & Machine Learning",  "eyebrow": "AI / ML",       "description": "Custom ML models, LLM integration, NLP chatbots, computer vision and AI pipeline development." },
+  "software.png":    { "title": "Software Development",   "eyebrow": "Software",      "description": "Full-stack web apps, SaaS products, REST APIs, UI/UX design and database architecture." },
+  "hardware.png":    { "title": "Hardware & IoT",         "eyebrow": "Hardware / IoT","description": "Arduino/Raspberry Pi IoT systems, embedded firmware, PCB design and edge-AI deployment." },
+  "engineering.png": { "title": "Engineering Projects",   "eyebrow": "Engineering",   "description": "Robotics, MATLAB simulations, mechanical and electrical engineering project builds." },
+  "research.png":    { "title": "Research & Publishing",  "eyebrow": "Research",      "description": "Paper writing, IEEE/Springer/Journal submission support. Complete PhD, MTech, BE/BTech and Diploma project assistance." }
+}
