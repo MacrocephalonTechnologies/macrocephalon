@@ -71,7 +71,7 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-white mb-4">Follow Us</h4>
             <div className="grid grid-cols-3 gap-3">
               <a
-                href="https://github.com"
+                href="https://github.com/MacrocephalonTechnologies"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/10 hover:bg-[#D4A574] flex items-center justify-center text-white hover:text-black transition-all"
@@ -80,7 +80,7 @@ export function Footer() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/macrocephalon/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/10 hover:bg-[#D4A574] flex items-center justify-center text-white hover:text-black transition-all"
@@ -89,16 +89,16 @@ export function Footer() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://x.com/macrocephalons"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/10 hover:bg-[#D4A574] flex items-center justify-center text-white hover:text-black transition-all"
-                aria-label="Twitter"
+                aria-label="X (Twitter)"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/macrocephalontechnologies/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/10 hover:bg-[#D4A574] flex items-center justify-center text-white hover:text-black transition-all"
@@ -107,7 +107,7 @@ export function Footer() {
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/macrocephalontechnologies/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/10 hover:bg-[#D4A574] flex items-center justify-center text-white hover:text-black transition-all"
@@ -116,7 +116,7 @@ export function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/@macrocephalontechnologies"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/10 hover:bg-[#D4A574] flex items-center justify-center text-white hover:text-black transition-all"
