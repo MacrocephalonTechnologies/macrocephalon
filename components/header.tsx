@@ -35,7 +35,7 @@ export function Header() {
         <Link href="/" className="absolute left-0 right-0 top-[calc(50%+0.25rem)] mx-auto flex w-fit -translate-y-1/2 flex-shrink-0 items-center md:static md:mx-0 md:mr-4 md:translate-y-0">
           <span className="flex flex-col rounded-md border-2 border-[#D4CCBF] bg-white px-3 py-2 font-bold text-[#1F2937] sm:px-4 shadow-sm">
             <span className="text-sm leading-none tracking-wide sm:text-base lg:text-lg">MACROCEPHALON</span>
-            <span className="mt-1 text-[10px] leading-none tracking-[0.12em] text-[#6B7280] sm:text-xs">Services &amp; Technologies</span>
+            <span className="mt-1 text-[10px] leading-none tracking-[0.12em] text-[#D4A574] sm:text-xs">Services &amp; Technologies</span>
           </span>
         </Link>
 

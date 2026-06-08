@@ -130,7 +130,7 @@ export function HeroSection() {
         <div className="text-[1.35rem] font-bold leading-none tracking-normal text-black sm:text-5xl sm:tracking-wide lg:text-6xl">
           MACROCEPHALON
         </div>
-        <div className="mt-3 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-gray-600 sm:text-base sm:tracking-[0.42em] lg:text-lg">
+        <div className="mt-3 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-[#D4A574] sm:text-base sm:tracking-[0.42em] lg:text-lg">
           Services &amp; Technologies
         </div>
       </Link>
