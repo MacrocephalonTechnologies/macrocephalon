@@ -2,12 +2,12 @@
   <!-- White background -->
   <rect width="200" height="200" fill="#FFFFFF"/>
 
-  <!-- Outer circle border - black -->
-  <circle cx="100" cy="100" r="94" fill="none" stroke="#000000" stroke-width="6"/>
+  <!-- Outer circle border -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#000000" stroke-width="2"/>
 
-  <!-- Inner circle - black -->
-  <circle cx="100" cy="100" r="83" fill="none" stroke="#000000" stroke-width="3.5"/>
+  <!-- Inner circle -->
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#000000" stroke-width="1.5"/>
 
-  <!-- M - logo brown -->
-  <text x="100" y="135" font-size="90" font-weight="900" text-anchor="middle" fill="#8B6040" font-family="Georgia, serif">M</text>
+  <!-- Professional black M -->
+  <text x="100" y="135" font-size="90" font-weight="900" text-anchor="middle" fill="#000000" font-family="Georgia, serif">M</text>
 </svg>
