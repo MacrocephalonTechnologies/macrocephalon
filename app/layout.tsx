@@ -51,10 +51,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/logo.png', type: 'image/png' },
+      { url: '/favicon.svg?v=3', type: 'image/svg+xml' },
+      { url: '/logo-trademark.png', type: 'image/png' },
     ],
-    apple: '/logo.png',
+    apple: '/logo-trademark.png',
   },
 }
 
